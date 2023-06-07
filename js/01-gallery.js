@@ -31,8 +31,15 @@ function openModal(imageUrl) {
     <img src="${imageUrl}">
   `);
   instance.show();
+
+  document.addEventListener("keydown", handleKeyDown);
+
+  function handleKeyDown(event) {
+    if (event.key === "Escape") {
+      instance.close();
+      document.removeEventListener("keydown", handleKeyDown);
+    }
+  }
 }
-
 gallery.addEventListener("click", handleClick);
-
 console.log(galleryItems);

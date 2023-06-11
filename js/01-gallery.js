@@ -25,7 +25,7 @@ function handleClick(event) {
     openModal(largeImage);
   }
 }
-
+gallery.addEventListener("click", handleClick);
 function openModal(imageUrl) {
   const instance = basicLightbox.create(`
     <img src="${imageUrl}">
@@ -41,5 +41,5 @@ function openModal(imageUrl) {
     }
   }
 }
-gallery.addEventListener("click", handleClick);
+
 console.log(galleryItems);

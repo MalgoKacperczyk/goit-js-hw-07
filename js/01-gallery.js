@@ -26,6 +26,7 @@ function handleClick(event) {
   }
 }
 gallery.addEventListener("click", handleClick);
+
 function openModal(imageUrl) {
   const instance = basicLightbox.create(`
     <img src="${imageUrl}">
@@ -33,13 +34,12 @@ function openModal(imageUrl) {
   instance.show();
 
   document.addEventListener("keydown", handleKeyDown);
-
-  function handleKeyDown(event) {
-    if (event.key === "Escape") {
-      instance.close();
-      document.removeEventListener("keydown", handleKeyDown);
-    }
-  }
 }
-
+//function handleKeyDown(event) {
+//if (event.key === "Escape") {
+//instance.close();
+//document.removeEventListener("keydown", handleKeyDown);
+//}
+//}
+//}
 console.log(galleryItems);

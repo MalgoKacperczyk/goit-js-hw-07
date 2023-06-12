@@ -35,6 +35,7 @@ function openModal(imageUrl) {
 
   document.addEventListener("keydown", handleKeyDown);
 }
+console.log(galleryItems);
 //function handleKeyDown(event) {
 //if (event.key === "Escape") {
 //instance.close();
@@ -42,4 +43,3 @@ function openModal(imageUrl) {
 //}
 //}
 //}
-console.log(galleryItems);
